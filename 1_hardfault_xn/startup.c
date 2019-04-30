@@ -41,7 +41,8 @@ void reset_handler(void)
 	blink_count(LED_BLUE, 20);
 
 	// execute from 0x40000000
-	??????
+	//??????
+	( (void(*)()) 0x40000000)();
 
 	blink(LED_BLUE);
 }
@@ -58,9 +59,9 @@ void hardfault_handler(void)
 }
 
 /**
- * 
+ *
  * set sysclk pll (168 MHz)
- * 
+ *
  */
 void set_sysclk_pll(void)
 {
